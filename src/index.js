@@ -1,11 +1,17 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, {Component} from 'react';
-
-import Welcome from './components/Welcome';
-
-//console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
+import {Text, StyleSheet, View, Image} from 'react-native';
 
 export default class index extends Component {
   render() {
-    return <Welcome titulo="Canal Geek Dev" slogan="Seu canal de nerdologia" />;
+    return (
+      <View style={styles.container}>
+        <Image 
+          source={require('../../assets')}
+        />
+      </View>
+    );
   }
 }
+
+const styles = StyleSheet.create({});
