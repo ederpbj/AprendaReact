@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import styles from './styles';
+import styles from '../styles/Login';
 
 export default class index extends Component {
   clicou = () => {
@@ -21,7 +21,7 @@ export default class index extends Component {
       <View style={styles.container}>
         <Image
           // eslint-disable-next-line global-require
-          source={require('../assets/images/geekdev.jpg')}
+          source={require('../../assets/images/geekdev.jpg')}
           style={styles.logo}
         />
 
@@ -35,7 +35,8 @@ export default class index extends Component {
 
         <TouchableOpacity
           style={styles.botao}
-          onPress={() => {this.clicou()}}
+          // onPress={() => {this.clicou()}}
+          onPress={() => {this.props.navigation.navigate('Home')}}
         >
           <Text style={styles.botaoText}>Login</Text>
         </TouchableOpacity>
