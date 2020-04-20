@@ -1,15 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import styles from '../styles';
+//Canal Geek Dev
+//Seu Canal de nerdologia
 
 const Welcome = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}> Canal Geek Dev </Text>
-      <Text style={styles.slogan}> Seu Canal de nerdologia </Text>
+      <Text style={styles.texto}> {this.props.titulo} </Text>
+      <Text style={styles.slogan}> {this.props.slogan} </Text>
     </View>
   );
 };
 
 export default Welcome;
-
-const styles = StyleSheet.create({});
