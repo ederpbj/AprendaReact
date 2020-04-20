@@ -6,11 +6,6 @@ import Welcome from './components/Welcome';
 
 export default class index extends Component {
   render() {
-    return (
-    <Welcome 
-      titulo="Canal Geek Dev" 
-      slogan="Seu canal de nerdologia" 
-
-      />);
+    return <Welcome titulo="Canal Geek Dev" slogan="Seu canal de nerdologia" />;
   }
 }
