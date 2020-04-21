@@ -22,7 +22,6 @@ export default class index extends Component {
     return (
       <View style={styles.container}>
         <Image
-          // eslint-disable-next-line global-require
           source={require('../../assets/images/geekdev.jpg')}
           style={styles.logo}
         />
