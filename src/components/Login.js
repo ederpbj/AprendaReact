@@ -12,8 +12,10 @@ import {
 import styles from '../styles/Login';
 
 export default class index extends Component {
+  
   clicou = () => {
     Alert.alert('CanalGeekDev', 'Você clicou no botão!');
+    // const [value, onChangeText] = React.useState('Useless Placeholder');
   };
 
   render() {
@@ -25,7 +27,11 @@ export default class index extends Component {
           style={styles.logo}
         />
 
-        <TextInput placeholder="Digite seu e-mail" style={styles.input} />
+        <TextInput
+          placeholder="Digite seu e-mail"
+          style={styles.input}
+          onChangeText={text => this.state.nome = text}
+        />
 
         <TextInput
           placeholder="Digite sua senha"
@@ -36,8 +42,9 @@ export default class index extends Component {
         <TouchableOpacity
           style={styles.botao}
           // onPress={() => {this.clicou()}}
-          onPress={() => {this.props.navigation.navigate('Home')}}
-        >
+          onPress={() => {
+            this.props.navigation.navigate('Home', {'nome': this.state.nome})
+          }}>
           <Text style={styles.botaoText}>Login</Text>
         </TouchableOpacity>
       </View>
