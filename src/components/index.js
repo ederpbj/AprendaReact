@@ -1,7 +1,7 @@
-import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import Login from './Login';
+import Login from './Login' ;
 import Home from './Home';
 // import Dashboard from '../pages/Dashboard';
 
@@ -20,6 +20,7 @@ const mainNavigation = createStackNavigator({
       headerShown: 'Home'
     }
   },
+  
 });
 
 export default createAppContainer(mainNavigation);

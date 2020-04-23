@@ -9,9 +9,10 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import styles from '../styles/Login';
+import styles from '../../../src/styles/Login';
 
 export default class index extends Component {
+  
   clicou = () => {
     Alert.alert('CanalGeekDev', 'Você clicou no botão!');
     // const [value, onChangeText] = React.useState('Useless Placeholder');
@@ -33,7 +34,7 @@ export default class index extends Component {
         <TextInput
           placeholder="Digite seu e-mail"
           style={styles.input}
-          //onChangeText={text => this.state.nome = text}
+          onChangeText={text => this.state.nome = text}
         />
 
         <TextInput
@@ -44,8 +45,16 @@ export default class index extends Component {
 
         <TouchableOpacity
           style={styles.botao}
-          onPress={() => {this.clicou()}}>
-            <Text style={styles.botaoText}>Login</Text>
+          // onPress={() => {this.clicou()}}
+          onPress={() => {this.clicou()}}
+          /* onPress={() => {
+            navigate('Home', {nome: [this.state.nome]})
+          }}> */
+          
+          /* onPress={() => {
+            this.props.navigation.navigate('Home', {'nome': this.state.nome})
+          }}> */
+          <Text style={styles.botaoText}>Login</Text>
         </TouchableOpacity>
       </View>
     );

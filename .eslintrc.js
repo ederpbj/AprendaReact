@@ -1,9 +1,9 @@
 module.exports = {
   env: {
-    browser: true,
+    node: true,
     es6: true
   },
-  extends: ["airbnb", "prettier", "prettier/react"],
+  extends: ["airbnb", "prettier", "prettier/react", "prettier/babel",],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
@@ -11,13 +11,14 @@ module.exports = {
   },
   parser: "babel-eslint",
   parserOptions: {
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true
     },
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react", "prettier"],
+  plugins: ["react", "prettier", "babel",],
   rules: {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".js"] }],
